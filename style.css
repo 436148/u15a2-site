@@ -147,7 +147,7 @@ h3 {
 
 #title.fade {
     opacity: 0;
-    /*need to make display: hidden*/
+    display: hidden
 }
 
 
@@ -247,4 +247,5 @@ button:hover {
 footer {
     background-color: var(--blue);
     color: var(--white);
+    text-align: center;
 }
