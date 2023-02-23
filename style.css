@@ -141,13 +141,14 @@ h3 {
     top: 25vh;
     font-size: xx-large;
     opacity: 1;
-    transition: opacity 1s;
+    visibility: visible;
+    transition: all 1s;
 
 }
 
 #title.fade {
     opacity: 0;
-    display: hidden
+    visibility: hidden;
 }
 
 
