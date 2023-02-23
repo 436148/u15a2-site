@@ -1,0 +1,250 @@
+:root {
+    --white: white;
+    --blue: #4672C4;
+    --black: black;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    /* scroll-behavior: smooth; */
+    background-color: var(--white);
+    color: var(--black);
+}
+
+nav {
+    color: var(--white);
+    background-color: var(--blue);
+
+    position: sticky;
+    top: 0;
+
+    border-bottom: solid;
+    border-color: whitesmoke;
+
+    display: flex;
+}
+
+nav ul {
+    flex-wrap: wrap;
+    list-style: none;
+    display: contents;
+}
+
+nav li {
+    font-size: large;
+    display: inline;
+    border-right: 2px solid var(--white);
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+/* Links in the navigation bar to places in the page. */
+nav li a {
+    /* Don't want default link underline. */
+    text-decoration: none;
+    /* Don't want default blue link colour. */
+    color: inherit;
+}
+
+nav span {
+    text-align: right;
+    margin-left: auto;
+}
+
+p {
+    color: var(--black);
+}
+
+ul {
+    color: var(--white);
+}
+
+#light-dark-toggle {
+    position: relative;
+    float: right;
+    top: 0px;
+    right: 20px;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default checkbox */
+#light-dark-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: lightgray;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+
+}
+
+input:checked+.slider {
+    background-color: black;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+section {
+    /* Prevent navigation bar covering the website content when
+    clicking an anchor from the navigation bar */
+    scroll-margin-top: 10vh;
+
+    /* Seperate sections with a faint line */
+    border-bottom: solid;
+    border-color: var(--black);
+    padding-bottom: 25px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--white);
+    background-color: var(--blue);
+    text-align: center;
+    padding: 1%;
+}
+
+#title {
+    position: sticky;
+    top: 25vh;
+    font-size: xx-large;
+    opacity: 1;
+    transition: opacity 1s;
+
+}
+
+#title.fade {
+    opacity: 0;
+    /*need to make display: hidden*/
+}
+
+
+.gap {
+    padding-top: 50vh;
+}
+
+.title-info {
+    font-size: x-large;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.employee-images {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    align-items: flex-end;
+    gap: 2%;
+}
+
+.employee-images p {
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 5%;
+}
+
+.employee-images img {
+    width: 100%;
+}
+
+.apply-info {
+    display: flex;
+    gap: 1%;
+}
+
+.apply-info div {
+    background-color: var(--blue);
+    width: 100%;
+}
+
+.apply-info p {
+    color: var(--white);
+}
+
+form {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+form div {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+label {
+    width: 15%;
+}
+
+button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-right: solid;
+    border-color: var(--white);
+    border-width: 0.5%;
+    transition-duration: 0.2s;
+    font-weight: bold;
+}
+
+button:hover {
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+.courseinfo {
+    display: flex;
+}
+
+.courseinfo div {
+    flex: 1;
+}
+
+.courseinfo p {
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.courseinfo img {
+    width: 100%;
+}
+
+.courseinfo a {
+    background-color: white;
+}
+
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+}
